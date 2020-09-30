@@ -5,10 +5,71 @@ package com.cp.ur;
 
 import org.junit.Test;
 
-import com.cp.ur.UserRegistration;
-
-import static org.junit.Assert.*;
+import org.junit.Assert;
 
 public class UserRegistrationTest {
-
+	@Test
+	public void givenfNameProperReturnTrue() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validatefName("Aakash");
+		Assert.assertTrue(true);
+	}
+	@Test
+	public void givenfNameImProperReturnFalse() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validatefName("aakash");
+		Assert.assertFalse(false);
+	}
+	@Test
+	public void givenlNameProperReturnTrue() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validatelName("Gandhi");
+		Assert.assertTrue(true);
+	}
+	@Test
+	public void givenlNameImProperReturnFalse() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validatelName("gandhi");
+		Assert.assertFalse(false);
+	}
+	@Test
+	public void givenEmailProperReturnTrue() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validateEmail("aakash@gmail.com");
+		Assert.assertTrue(true);
+	}
+	@Test
+	public void givenEmailImProperReturnFalse() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validateEmail("aakash");
+		Assert.assertFalse(false);
+	}
+	@Test
+	public void givenPhoneNumberProperReturnTrue() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validatePno("91 9087654321");
+		Assert.assertTrue(true);
+	}
+	@Test
+	public void givenPhoneNumberImProperReturnFalse() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validatePno("987654321");
+		Assert.assertFalse(false);
+	}
+	@Test
+	public void givenPasswordProperReturnTrue() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validatePassword("aakash@1234");
+		Assert.assertTrue(true);
+	}
+	@Test
+	public void givenPasswordImProperReturnFalse() {
+		UserRegistration user=  new UserRegistration();
+		boolean res = user.validatePassword("aakash");
+		Assert.assertFalse(false);
+	}
+	
+	
+	
+	
 }
